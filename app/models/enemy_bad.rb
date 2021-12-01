@@ -1,0 +1,2 @@
+class EnemyBad < ApplicationRecord
+end
