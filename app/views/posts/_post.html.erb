@@ -17,6 +17,13 @@
       </div>
       <p><%= post.title %></p>
       <span class="name">
+      <% if user_signed_in? %>
+      <% if current_user.enemy_bad_by?(post.id) %>
+          <td><%= link_to 'いいねを外す', destroy_enemy_bad_path(post), method: :DELETE %><%= post.enemy_bad.count %></td>
+        <% else %>
+          <td><%= link_to 'いいね', create_enemy_bad_path(post), method: :POST %><%= post.enemy_bad.count %></td>
+        <% end %>
+        <% end %>
         <a href="">
           <span>投稿者</span><%= post.user.nickname %>
         </a>
