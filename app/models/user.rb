@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :comments 
+  has_many :enemy_bad
+
+  def enemy_bad_by?(post_id)
+    enemy_bad.where(post_id: post_id).exists?
+  end
 end

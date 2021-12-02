@@ -3,6 +3,7 @@ class Post < ApplicationRecord
 
   belongs_to :user
   has_many :comments 
+  has_many :enemy_bad
 
   def self.search(search)
     if search != ""
