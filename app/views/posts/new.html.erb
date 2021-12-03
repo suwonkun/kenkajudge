@@ -3,7 +3,10 @@
     <h3>投稿フォーム</h3>
     <%= form_with(model: @post, local: true) do |form| %>
       <%= form.text_field :title, placeholder: "タイトル" %>
-      <%= form.text_field :image, placeholder: "画像（任意）" %>
+      <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= form.file_field :image, class: 'hidden' %>
+    </label>
        
       <div class="weight-bold-text">
          相手
