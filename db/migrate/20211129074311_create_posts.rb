@@ -6,7 +6,6 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.integer :enemy_id
       t.integer :step_id
       t.integer :wiich_id
-      t.text :image
       t.timestamps
     end
   end

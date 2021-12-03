@@ -15,6 +15,7 @@
           <% end %>
         </ul>
       </div>
+          <%= image_tag post.image, class: 'post-image' if post.image.attached? %>
       <p><%= post.title %></p>
       <span class="name">
       <% if user_signed_in? %>
