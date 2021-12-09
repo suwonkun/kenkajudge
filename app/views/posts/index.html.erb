@@ -1,9 +1,20 @@
-<%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
-<% end %>
-<div class="contents row">
+<div class="bg-light p-3 p-sm-5 mb-4 border-top text-center">
+  <div class="container">
+    <h1 class="display-4">喧嘩ジャッジ</h1>
+    <p class="lead">これのアプリケーションでは、喧嘩内容を投稿し、第三者の視点から、相手が悪いかを判断してもおらい、解決に向けた糸口を模索していくサイトになります。</p>
+    <hr class="my-4">
+    <p>自分の身に起こった、イライラした、怒った、怒られたなどあれば、投稿してみましょう</p>
+    <%= link_to "投稿する", new_post_path, class: "post",class:"btn btn-primary btn-lg" %>
+  </div>
+</div>
+<div class="container mt-2 text-center">
+  <h1>投稿一覧</h1>
+  
+<div class="container">
+  <div class="row">
   <% @posts.each do |post| %>
    <%= render partial: "post", locals: { post: post } %>
   <% end %>
+</div>
+</div>
 </div>
