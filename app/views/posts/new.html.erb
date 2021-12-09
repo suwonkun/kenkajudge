@@ -1,12 +1,14 @@
-<div class="contents row">
+<div class="mb-3">
   <div class="container">
     <h3>投稿フォーム</h3>
     <%= form_with(model: @post, local: true) do |form| %>
       <%= form.text_field :title, placeholder: "タイトル" %>
+      <div>
       <label class="form-image">
       <span class="image-file">画像</span>
       <%= form.file_field :image, class: 'hidden' %>
     </label>
+    </div>
        
       <div class="weight-bold-text">
          相手
