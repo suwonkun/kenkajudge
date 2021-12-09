@@ -1,7 +1,13 @@
-<div class="content_post" style="background-image: url(<%= post.image %>);">
-    <div class="more">
-         <span><%= image_tag 'arrow_top.png' %></span> 
-        <ul class="more_list">
+    <div class="col-sm">
+      <div class="card" style="width:35em" >
+      <%= image_tag post.image, class: "card-img-top" if post.image.attached? %>
+      <div class="position-relative">
+      <div class="card-body">
+      <h5 class="card-title"><%= post.title %></h5>
+      <p class="card-text"><%= post.contents %></p>
+      <div class="position-absolute top-0 end-0">
+        <p>Menu</p>
+        <ul class="list-group">
          <li>
             <%= link_to '詳細', post_path(post.id), method: :get %>
           </li>
@@ -14,19 +20,23 @@
           </li>
           <% end %>
         </ul>
-      </div>
-          <%= image_tag post.image, class: 'post-image' if post.image.attached? %>
-      <p><%= post.title %></p>
-      <span class="name">
+        </div>
       <% if user_signed_in? %>
       <% if current_user.enemy_bad_by?(post.id) %>
-          <td><%= link_to 'いいねを外す', destroy_enemy_bad_path(post), method: :DELETE %><%= post.enemy_bad.count %></td>
+          <div class="btn btn-secondary">
+          <%= link_to '相手が悪い', destroy_enemy_bad_path(post), method: :DELETE,class:"text-white" %><%= post.enemy_bad.count %></div>
         <% else %>
-          <td><%= link_to 'いいね', create_enemy_bad_path(post), method: :POST %><%= post.enemy_bad.count %></td>
+          <div class="btn btn-primary">
+          <%= link_to '相手が悪い', create_enemy_bad_path(post), method: :POST,class:"text-white" %><%= post.enemy_bad.count %></div>
         <% end %>
         <% end %>
+        <div class="position-absolute bottom-0 end-0">
         <a href="">
-          <span>投稿者</span><%= post.user.nickname %>
+          <span >投稿者</span><%= post.user.nickname %>
         </a>
-      </span>
-    </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+</div>
