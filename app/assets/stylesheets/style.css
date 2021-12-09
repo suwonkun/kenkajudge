@@ -10757,6 +10757,6 @@ body {
   margin: 50px 0px;
 }
 
-li{
+.list-group{
   list-style: none;
 }
