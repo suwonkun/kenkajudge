@@ -9,25 +9,6 @@
       <%= form.file_field :image, class: 'hidden' %>
     </label>
     </div>
-       
-      <div class="weight-bold-text">
-         相手
-      <span class="indispensable">必須</span>
-      <%= form.collection_select(:enemy_id, Enemy.all, :id, :status, {}, {class:"select-box", id:"generation"}) %>
-     </div>
-
-      <div class="weight-bold-text">
-         怒ったのは？
-      <span class="indispensable">必須</span>
-      <%= form.collection_select(:wiich_id, Wiich.all, :id, :status, {}, {class:"select-box", id:"generation"}) %>
-     </div>
-
-      <div class="weight-bold-text">
-         段階
-      <span class="indispensable">必須</span>
-      <%= form.collection_select(:step_id, Step.all, :id, :status, {}, {class:"select-box", id:"generation"}) %>
-     </div>
-
       <%= form.text_area :contents, placeholder: "内容", rows: "10" %>
 
       <%= form.submit "投稿する" %>
