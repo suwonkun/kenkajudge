@@ -26,16 +26,9 @@
       <div class="field">
         <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
-
-       <%= f.collection_select(:sex_id, Sex.all, :id, :status, {}, {class:"select-box", id:"sex"}) %>
-       <%= f.collection_select(:job_id, Job.all, :id, :status, {}, {class:"select-box", id:"job"}) %>
-       <%= f.collection_select(:generation_id, Generation.all, :id, :status, {}, {class:"select-box", id:"generation"}) %>
-
-
-
-      <div class="actions">
+      <div>
         <%= f.submit "Sign up" %>
+      </div>
       </div>
     <% end %>
   </div>
