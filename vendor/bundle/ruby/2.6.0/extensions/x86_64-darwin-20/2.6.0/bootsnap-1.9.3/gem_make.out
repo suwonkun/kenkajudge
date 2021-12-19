@@ -1,0 +1,15 @@
+current directory: /Users/nakazawashion/projects/kenkajudge/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.9.3/ext/bootsnap
+/Users/nakazawashion/.rbenv/versions/2.6.6/bin/ruby -I /Users/nakazawashion/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20211218-14410-3977by.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nakazawashion/projects/kenkajudge/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/nakazawashion/projects/kenkajudge/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/nakazawashion/projects/kenkajudge/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.9.3/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20211218-14410-rupsdt/bootsnap
